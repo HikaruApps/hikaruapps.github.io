@@ -1,65 +1,40 @@
-# 🖥️ Hikaru.exe | System Initialized
+# Hikaru
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Status-Online-00ff41?style=flat-square&logo=render&logoColor=white" />
-  <img src="https://img.shields.io/badge/Location-RU%20(UTC%2B3)-555555?style=flat-square" />
-  <img src="https://img.shields.io/badge/Age-16-ED21A2?style=flat-square" />
+  <img src="https://img.shields.io/badge/Status-Open%20to%20work-d97757?style=flat-square" />
+  <img src="https://img.shields.io/badge/Location-RU%20(UTC%2B3)-6b6a65?style=flat-square" />
+  <img src="https://img.shields.io/badge/Age-17-d97757?style=flat-square" />
 </p>
 
-> **Web Developer & DevOps Engineer**
+> **SysAdmin & Web Developer**
 > *Automating the chaos, one container at a time.*
 
 ---
 
-### 🛠️ Tech Stack & OS Info
-
-```bash
-$ neofetch --user hikaru
-
-```
+### Stack
 
 | Category | Tools |
 | --- | --- |
-| **Languages** | `JavaScript`, `Python`, `Bash` |
-| **Infrastructure** | `Docker`, `Nginx`, `Kubernetes (Learning)` |
-| **Tools** | `Git`, `Linux`, `GitHub Actions` |
+| **Systems** | `Linux`, `Bash`, `Nginx`, `Networking` |
+| **Infrastructure** | `Docker`, `GitHub Actions`, `Kubernetes (Learning)` |
+| **Web** | `JavaScript`, `Python`, `HTML/CSS`, `Git` |
 
 ---
 
-### 📊 System Activity
+### Projects
+
+* [**ShadowVPN**](https://shadowvpn.io) — VPN built to bypass censorship and keep the internet open. 3,000+ daily users, 20+ servers with 20+ Gbit/s total bandwidth.
 
 ---
 
-### 🔗 Connectivity
+### Links
 
-* [🌐 Website](https://hikaruapps.github.io/Hikaru.exe---WebPortfolio/)
-* [✈️ Telegram](https://t.me/HikaruDevOps)
-* [🦋 Bluesky](https://bsky.app/profile/nullracoon.bsky.social)
+* [Website](https://hikaruapps.github.io/)
+* [Telegram](https://t.me/HikaruDevOps)
+* [Bluesky](https://bsky.app/profile/nullracoon.bsky.social)
 
 ---
 
 <p align="center">
-<img src="https://quotes-github-readme.vercel.app/api?quote=If%20it's%20not%20automated,%20it's%20broken.&author=Hikaru.exe&theme=dark&color=ED21A2" />
+<img src="https://quotes-github-readme.vercel.app/api?quote=If%20it's%20not%20automated,%20it's%20broken.&author=Hikaru&theme=light&color=d97757" />
 </p>
-
-```
-
------
-
-### 💡 Just a few final tweaks:
-
-1.  **The "Pink + Green" Palette:** The **\#ED21A2** (Pink) and **\#00ff41** (Green) look incredibly sharp against the black. It gives a "Cyberpunk / Tokyo Ghoul / Terminal" mix that is very unique. It definitely feels "Hikaru."
-2.  **Bluesky Handle:** Make sure to change `hikaru.bsky.social` to your real handle once you have it.
-3.  **Website Link:** Don't forget to put the link to your static site (where we added the petals) once you host it\!
-
-### What's next for Hikaru.exe?
-
-Your digital identity is now ready. You have:
-
-  * A **minimalist portfolio** with petal animation.
-  * A **terminal-style** bio and links.
-  * A **professional GitHub profile** that matches.
-
-**Would you like me to help you set up a simple `docker-compose.yml` so you can launch your website and a test database at the same time?** It’s a great next step for your DevOps learning.
-
-```
