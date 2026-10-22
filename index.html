@@ -3,356 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hikaru — SysAdmin & Web Developer</title>
+    <title>hikaru</title>
     <meta name="description" content="Hikaru — 17 y.o. system administrator and web developer from Russia.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg: #faf9f5;
-            --surface: #ffffff;
-            --text: #141413;
-            --muted: #6b6a65;
-            --border: #e8e6dc;
-            --accent: #d97757;
-            --accent-dark: #c6613f;
-            --accent-soft: #f5e6dd;
+            --bg: #ffffff;
+            --text: #222222;
+            --muted: #8a8a8a;
+            --accent: #c9461d;
         }
 
         * { box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
 
         body {
             margin: 0;
             background: var(--bg);
             color: var(--text);
-            font-family: 'Inter', system-ui, sans-serif;
-            font-size: 16px;
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
 
-        ::selection { background: var(--accent-soft); }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
 
-        a { color: inherit; }
+        a:hover { text-decoration: underline; }
 
         .wrap {
-            max-width: 680px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 16px;
         }
 
-        /* Header */
         header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 28px 0;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px 24px;
+            padding: 24px 0 16px;
+            font-family: 'EB Garamond', serif;
+            font-size: 1.6rem;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .logo-mark {
-            width: 22px;
-            height: 22px;
-            color: var(--accent);
-        }
+        header a { color: var(--text); }
 
         header nav {
             display: flex;
-            gap: 22px;
-            font-size: 0.92rem;
+            gap: 20px;
         }
 
-        header nav a {
-            color: var(--muted);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+        main { padding-left: 30px; }
 
-        header nav a:hover { color: var(--text); }
-
-        /* Hero */
-        .hero { padding: 72px 0 56px; }
-
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.78rem;
-            color: var(--muted);
-            border: 1px solid var(--border);
-            background: var(--surface);
-            border-radius: 999px;
-            padding: 5px 12px;
-            margin-bottom: 28px;
-        }
-
-        .status-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--accent);
-            animation: pulse 2.4s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.35; }
-        }
-
-        h1, h2, h3 {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-weight: 400;
-            letter-spacing: -0.01em;
-        }
-
-        h1 {
-            font-size: clamp(2.4rem, 7vw, 3.4rem);
-            line-height: 1.1;
-            margin: 0 0 20px;
-        }
-
-        h1 em {
-            font-style: normal;
-            color: var(--accent);
-        }
-
-        .lead {
-            font-size: 1.12rem;
-            color: var(--muted);
-            margin: 0 0 32px;
-            max-width: 540px;
-        }
-
-        .actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 11px 20px;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: background 0.2s, border-color 0.2s, transform 0.2s;
-        }
-
-        .btn:hover { transform: translateY(-1px); }
-
-        .btn-primary {
-            background: var(--accent);
-            color: #fff;
-        }
-
-        .btn-primary:hover { background: var(--accent-dark); }
-
-        .btn-ghost {
-            border: 1px solid var(--border);
-            background: var(--surface);
-        }
-
-        .btn-ghost:hover { border-color: var(--accent); }
-
-        /* Sections */
-        section {
-            padding: 48px 0;
-            border-top: 1px solid var(--border);
-        }
-
-        .label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--accent);
-            margin: 0 0 18px;
-        }
-
-        section p { margin: 0 0 14px; }
+        section { margin: 40px 0; }
 
         h2 {
-            font-size: 1.8rem;
-            margin: 0 0 18px;
-        }
-
-        /* Stack */
-        .stack {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-            gap: 14px;
-        }
-
-        .stack-group {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 18px 20px;
-        }
-
-        .stack-group h3 {
-            font-size: 1.1rem;
-            margin: 0 0 10px;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .tag {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.78rem;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 2px 8px;
-        }
-
-        /* Projects */
-        .project {
-            display: block;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 24px;
-            text-decoration: none;
-            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-        }
-
-        .project:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(217, 119, 87, 0.08);
-        }
-
-        .project-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
-
-        .project h3 {
-            font-size: 1.4rem;
-            margin: 0;
-        }
-
-        .project-url {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.82rem;
-            color: var(--accent);
-            white-space: nowrap;
-        }
-
-        .project p {
-            color: var(--muted);
-            margin: 0 0 16px;
-        }
-
-        .stats {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px 28px;
-            margin-bottom: 18px;
-        }
-
-        .stats strong {
-            display: block;
-            font-family: 'Source Serif 4', Georgia, serif;
+            font-family: 'EB Garamond', serif;
             font-weight: 500;
-            font-size: 1.5rem;
-            color: var(--accent);
-            line-height: 1.2;
+            font-size: 1.6rem;
+            margin: 0 0 12px;
         }
 
-        .stats span {
-            font-size: 0.82rem;
+        p { margin: 0 0 16px; }
+
+        .item { margin-bottom: 20px; }
+
+        .meta {
+            display: block;
             color: var(--muted);
-        }
-
-        /* Quote */
-        blockquote {
-            margin: 0;
-            padding-left: 18px;
-            border-left: 2px solid var(--accent);
-            font-family: 'Source Serif 4', Georgia, serif;
             font-size: 1.35rem;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
-        /* Contacts */
-        .contacts {
-            list-style: none;
+        .title {
+            display: block;
+            font-size: 1.9rem;
+            line-height: 1.25;
+        }
+
+        .item p {
+            margin: 6px 0 0;
+            font-size: 1.1rem;
+        }
+
+        ul {
             margin: 0;
             padding: 0;
-        }
-
-        .contacts li { border-bottom: 1px solid var(--border); }
-
-        .contacts a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 0;
-            text-decoration: none;
-            transition: color 0.2s, padding 0.2s;
-        }
-
-        .contacts a:hover {
-            color: var(--accent);
-            padding-left: 6px;
-        }
-
-        .contacts span {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            color: var(--muted);
+            list-style: none;
         }
 
         footer {
-            padding: 32px 0 48px;
-            font-size: 0.85rem;
+            padding: 24px 0 40px 30px;
             color: var(--muted);
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 8px;
+            font-size: 0.95rem;
         }
 
-        @media (max-width: 520px) {
-            header nav { gap: 14px; }
-            .hero { padding: 48px 0 40px; }
-            .project-head { flex-direction: column; gap: 2px; }
+        @media (max-width: 600px) {
+            body { font-size: 1.1rem; }
+            main, footer { padding-left: 0; }
+            .meta { font-size: 1.15rem; }
+            .title { font-size: 1.55rem; }
         }
     </style>
 </head>
 <body>
     <div class="wrap">
         <header>
-            <a href="#" class="logo">
-                <svg class="logo-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 2l1.8 6.6L20.5 6l-4.6 5.1L22 12l-6.1 0.9 4.6 5.1-6.7-2.6L12 22l-1.8-6.6L3.5 18l4.6-5.1L2 12l6.1-0.9L3.5 6l6.7 2.6z"/>
-                </svg>
-                Hikaru
-            </a>
+            <a href="#">hikaru</a>
             <nav>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
@@ -361,110 +125,54 @@
         </header>
 
         <main>
-            <div class="hero">
-                <div class="status"><span class="status-dot"></span>Russia · UTC+3 · open to work</div>
-                <h1>SysAdmin &amp; <em>Web Developer</em></h1>
-                <p class="lead">
-                    I'm Hikaru, a 17-year-old engineer who keeps servers running
-                    and builds clean, fast websites on top of them.
-                </p>
-                <div class="actions">
-                    <a class="btn btn-primary" href="#projects">See projects</a>
-                    <a class="btn btn-ghost" href="https://t.me/HikaruDevOps" target="_blank" rel="noopener">Message me</a>
-                </div>
-            </div>
-
             <section id="about">
-                <p class="label">About</p>
-                <h2>From the server rack to the browser</h2>
                 <p>
-                    I set up and maintain Linux servers, networks and services, and
-                    I write the web applications that run on them. I like owning the
-                    whole path, from configuring Nginx and Docker to shipping the frontend.
+                    Hi, I'm Hikaru, a 17-year-old system administrator and web developer
+                    from Russia (UTC+3).
                 </p>
-                <p>Currently deep-diving into Kubernetes.</p>
-            </section>
-
-            <section id="stack">
-                <p class="label">Stack</p>
-                <div class="stack">
-                    <div class="stack-group">
-                        <h3>Systems</h3>
-                        <div class="tags">
-                            <span class="tag">Linux</span>
-                            <span class="tag">Bash</span>
-                            <span class="tag">Nginx</span>
-                            <span class="tag">Networking</span>
-                        </div>
-                    </div>
-                    <div class="stack-group">
-                        <h3>Infrastructure</h3>
-                        <div class="tags">
-                            <span class="tag">Docker</span>
-                            <span class="tag">GitHub Actions</span>
-                            <span class="tag">Kubernetes</span>
-                        </div>
-                    </div>
-                    <div class="stack-group">
-                        <h3>Web</h3>
-                        <div class="tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">Git</span>
-                        </div>
-                    </div>
-                </div>
+                <p>
+                    I set up and maintain Linux servers, networks and services, and I
+                    write the web applications that run on them: from Nginx and Docker
+                    configs to the frontend. Currently deep-diving into Kubernetes.
+                </p>
+                <p>
+                    Stack: Linux, Bash, Nginx, Docker, GitHub Actions, JavaScript, Python.
+                </p>
             </section>
 
             <section id="projects">
-                <p class="label">Projects</p>
-                <a class="project" href="https://shadowvpn.io" target="_blank" rel="noopener">
-                    <div class="project-head">
-                        <h3>ShadowVPN</h3>
-                        <span class="project-url">shadowvpn.io ↗</span>
-                    </div>
+                <h2>Projects</h2>
+                <div class="item">
+                    <span class="meta">VPN · anti-censorship</span>
+                    <a class="title" href="https://shadowvpn.io" target="_blank" rel="noopener">ShadowVPN</a>
                     <p>
                         A VPN built to bypass censorship and keep the internet open.
-                        I run the server infrastructure and the website end to end.
+                        3,000+ daily users, 20+ servers at 1 Gbit/s each, 20+ Gbit/s
+                        in total. I run the infrastructure and the website end to end.
                     </p>
-                    <div class="stats">
-                        <div><strong>3,000+</strong><span>daily users</span></div>
-                        <div><strong>20+</strong><span>servers, 1 Gbit/s each</span></div>
-                        <div><strong>20+ Gbit/s</strong><span>total bandwidth</span></div>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">VPN</span>
-                        <span class="tag">Anti-censorship</span>
-                        <span class="tag">Linux</span>
-                        <span class="tag">Networking</span>
-                    </div>
-                </a>
-            </section>
-
-            <section>
-                <p class="label">Philosophy</p>
-                <blockquote>“If it’s not automated, it’s broken.”</blockquote>
+                </div>
             </section>
 
             <section id="contact">
-                <p class="label">Contact</p>
-                <ul class="contacts">
-                    <li><a href="https://t.me/HikaruDevOps" target="_blank" rel="noopener">Telegram <span>@HikaruDevOps ↗</span></a></li>
-                    <li><a href="https://github.com/HikaruApps" target="_blank" rel="noopener">GitHub <span>HikaruApps ↗</span></a></li>
-                    <li><a href="https://bsky.app/profile/nullracoon.bsky.social" target="_blank" rel="noopener">Bluesky <span>nullracoon.bsky.social ↗</span></a></li>
+                <h2>Contact</h2>
+                <ul>
+                    <li class="item">
+                        <span class="meta">Telegram</span>
+                        <a class="title" href="https://t.me/HikaruDevOps" target="_blank" rel="noopener">@HikaruDevOps</a>
+                    </li>
+                    <li class="item">
+                        <span class="meta">GitHub</span>
+                        <a class="title" href="https://github.com/HikaruApps" target="_blank" rel="noopener">HikaruApps</a>
+                    </li>
+                    <li class="item">
+                        <span class="meta">Bluesky</span>
+                        <a class="title" href="https://bsky.app/profile/nullracoon.bsky.social" target="_blank" rel="noopener">nullracoon.bsky.social</a>
+                    </li>
                 </ul>
             </section>
         </main>
 
-        <footer>
-            <span>© <span id="year">2026</span> Hikaru</span>
-            <span>Made with care, hosted on GitHub Pages</span>
-        </footer>
+        <footer>“If it’s not automated, it’s broken.”</footer>
     </div>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
