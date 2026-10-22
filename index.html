@@ -267,6 +267,27 @@
             margin: 0 0 16px;
         }
 
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-bottom: 18px;
+        }
+
+        .stats strong {
+            display: block;
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+
+        .stats span {
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
         /* Quote */
         blockquote {
             margin: 0;
@@ -404,14 +425,18 @@
                         <span class="project-url">shadowvpn.io ↗</span>
                     </div>
                     <p>
-                        A VPN service: server infrastructure, deployment and the website,
-                        built and maintained end to end.
+                        A VPN built to bypass censorship and keep the internet open.
+                        I run the server infrastructure and the website end to end.
                     </p>
+                    <div class="stats">
+                        <div><strong>3,000+</strong><span>daily users</span></div>
+                        <div><strong>20–30 Gbit/s</strong><span>server capacity</span></div>
+                    </div>
                     <div class="tags">
                         <span class="tag">VPN</span>
+                        <span class="tag">Anti-censorship</span>
                         <span class="tag">Linux</span>
                         <span class="tag">Networking</span>
-                        <span class="tag">Web</span>
                     </div>
                 </a>
             </section>

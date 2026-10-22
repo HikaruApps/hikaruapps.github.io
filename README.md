@@ -23,7 +23,7 @@
 
 ### Projects
 
-* [**ShadowVPN**](https://shadowvpn.io) — VPN service: infrastructure, deployment and website.
+* [**ShadowVPN**](https://shadowvpn.io) — VPN built to bypass censorship and keep the internet open. 3,000+ daily users, 20–30 Gbit/s server capacity.
 
 ---
 
